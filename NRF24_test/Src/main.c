@@ -24,7 +24,7 @@
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "string.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "nRF24L01.h"
@@ -101,7 +101,6 @@ int main(void)
 NRF24_begin(CSN_GPIO_Port,CSN_Pin,CE_Pin,hspi3);
 nrf24_DebugUART_Init(huart2);
 
-printRadioSettings();
 
 	//**** TRANSMIT - ACK ****//
 	NRF24_stopListening();
@@ -112,6 +111,7 @@ printRadioSettings();
 
 	NRF24_enableDynamicPayloads();
 	NRF24_enableAckPayload();
+printRadioSettings();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -122,6 +122,18 @@ printRadioSettings();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	if (NRF24_write(myTxData, 32)) {
+		NRF24_read(AckPayload, 32);
+		HAL_UART_Transmit(&huart2,
+				(uint8_t *) "Transmitted Successfully\r\n",
+				strlen("Transmitted Successfully\r\n"), 10);
+
+		char myDataack[80];
+		sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
+		HAL_UART_Transmit(&huart2, (uint8_t *) myDataack, strlen(myDataack),
+				10);
+	}
+	HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
