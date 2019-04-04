@@ -222,7 +222,7 @@ void NRF24_begin(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_Pi
 	//Initialise PA level to max (0dB)
 	NRF24_setPALevel(RF24_PA_0dB);
 	//Initialise data rate to 1Mbps
-	NRF24_setDataRate(RF24_2MBPS);
+	NRF24_setDataRate(RF24_1MBPS);
 	//Initalise CRC length to 16-bit (2 bytes)
 	NRF24_setCRCLength(RF24_CRC_16);
 	//Disable dynamic payload
@@ -238,7 +238,8 @@ void NRF24_begin(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_Pi
 	NRF24_flush_tx();
 	NRF24_flush_rx();
 	
-	NRF24_powerDown();
+//	NRF24_powerDown();
+	NRF24_powerUp();
 	
 }
 //13. Listen on open pipes for reading (Must call NRF24_openReadingPipe() first)

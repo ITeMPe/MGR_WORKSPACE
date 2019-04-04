@@ -58,9 +58,9 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint64_t TxpipeAddrs = 0x11223344AA;
-char myTxData[32] = "Hello World!";
-char AckPayload[32];
+uint64_t RxpipeAddrs = 0x11223344AA;
+char myRxData[50];
+char myAckPayload[32] = "Ack by STML0!";
 /* USER CODE END 0 */
 
 /**
@@ -94,24 +94,19 @@ int main(void)
   MX_SPI1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  NRF24_begin(CSN_GPIO_Port, CSN_Pin, CE_Pin, hspi1);
-  	nrf24_DebugUART_Init(huart2);
+	NRF24_begin(CSN_GPIO_Port, CSN_Pin, CE_Pin, hspi1);
+	nrf24_DebugUART_Init(huart2);
 
 
-  	//**** TRANSMIT - ACK ****//
-  	NRF24_stopListening();
-  	NRF24_openWritingPipe(TxpipeAddrs);
-  	NRF24_setAutoAck(true);
-  	NRF24_setChannel(52);
-  	NRF24_setPayloadSize(32);
+	NRF24_openReadingPipe(0, RxpipeAddrs);
+//	NRF24_setAutoAck(false);
+//	NRF24_setChannel(52);
+//	NRF24_setPayloadSize(32);
+//	NRF24_enableDynamicPayloads();
+//	NRF24_enableAckPayload();
+	printRadioSettings();
 
-  	NRF24_setPALevel(RF24_PA_m18dB);
-  	NRF24_setDataRate(RF24_250KBPS);
-
-  	NRF24_enableDynamicPayloads();
-  	NRF24_enableAckPayload();
-
-  	printRadioSettings();
+	NRF24_startListening();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,19 +116,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if (NRF24_write(myTxData, 32)) {
-		NRF24_read(AckPayload, 32);
-		HAL_UART_Transmit(&huart2,
-				(uint8_t *) "Transmitted Successfully\r\n",
-				strlen("Transmitted Successfully\r\n"), 10);
-
-		char myDataack[80];
-		sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-		HAL_UART_Transmit(&huart2, (uint8_t *) myDataack, strlen(myDataack),
-				10);
-	}
-
-	HAL_Delay(1000);
+		if(NRF24_available())
+		{
+			NRF24_read(myRxData, 32);
+			NRF24_writeAckPayload(1, myAckPayload, 32);
+			myRxData[32] = '\r'; myRxData[32+1] = '\n';
+			HAL_UART_Transmit(&huart2, (uint8_t *)myRxData, 32+2, 10);
+		}
   }
   /* USER CODE END 3 */
 }
@@ -158,8 +147,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_4;
-  RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_2;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_3;
+  RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_3;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -173,7 +162,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
   {
     Error_Handler();
   }

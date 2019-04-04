@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\MGR_WORKSPACE\NRF24_test_NUCLEO_L073rz"/>
 		<item value="D:\MGR_WORKSPACE\NRF24_test"/>
 		<item value="D:\MGR_WORKSPACE\rc522_test"/>
 		<item value="D:\MGR_WORKSPACE\Mgr_robot"/>

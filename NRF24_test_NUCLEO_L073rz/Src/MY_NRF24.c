@@ -222,7 +222,7 @@ void NRF24_begin(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_Pi
 	//Initialise PA level to max (0dB)
 	NRF24_setPALevel(RF24_PA_0dB);
 	//Initialise data rate to 1Mbps
-	NRF24_setDataRate(RF24_2MBPS);
+	NRF24_setDataRate(RF24_250KBPS);
 	//Initalise CRC length to 16-bit (2 bytes)
 	NRF24_setCRCLength(RF24_CRC_16);
 	//Disable dynamic payload
@@ -285,8 +285,8 @@ bool NRF24_write( const void* buf, uint8_t len )
   }
   while( ! ( status & ( _BV(BIT_TX_DS) | _BV(BIT_MAX_RT) ) ) && ( HAL_GetTick() - sent_at < timeout ) );
 	
-	printConfigReg();
-	printStatusReg();
+//	printConfigReg();
+//	printStatusReg();
 	
 	bool tx_ok, tx_fail;
   NRF24_whatHappened(&tx_ok,&tx_fail, &ack_payload_available);

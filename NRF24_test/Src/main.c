@@ -20,11 +20,10 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "gfxsimulator.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
-#include "string.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "nRF24L01.h"
@@ -38,7 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define RX_MODE
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -60,9 +59,15 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint64_t TxpipeAddrs = 0x11223344AA;
-char myTxData[32] = "Hello World!";
+#ifndef RX_MODE
+uint64_t TxpipeAddrs = 0xF0F0F0F0D2;
+char myTxData[32] = "Hello World form my STM32F429ZI!";
 char AckPayload[32];
+#else
+uint64_t RxpipeAddrs = 0xF0F0F0F0E1;
+char myRxData[50];
+char myAckPayload[32] = "Ack by STMF4!";
+#endif
 /* USER CODE END 0 */
 
 /**
@@ -93,25 +98,51 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_GFXSIMULATOR_Init();
   MX_SPI3_Init();
   MX_USART2_UART_Init();
   MX_USART1_UART_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-NRF24_begin(CSN_GPIO_Port,CSN_Pin,CE_Pin,hspi3);
-nrf24_DebugUART_Init(huart2);
+  HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin|LED2_Pin|LED3_Pin,SET);
+	NRF24_begin(CSN_GPIO_Port, CSN_Pin, CE_Pin, hspi3);
+	nrf24_DebugUART_Init(huart2);
 
-
+#ifndef RX_MODE
 	//**** TRANSMIT - ACK ****//
-	NRF24_stopListening();
+//	NRF24_openReadingPipe(1,ADRESNADAWCZY);
 	NRF24_openWritingPipe(TxpipeAddrs);
-	NRF24_setAutoAck(true);
-	NRF24_setChannel(52);
-	NRF24_setPayloadSize(32);
+	NRF24_setPALevel(RF24_PA_0dB);
+	NRF24_setDataRate(RF24_250KBPS);
+	NRF24_setCRCLength(RF24_CRC_16);
+	NRF24_setRetries(15, 15);
+	NRF24_setChannel(120);
 
-	NRF24_enableDynamicPayloads();
-	NRF24_enableAckPayload();
+	NRF24_setPayloadSize(32);
+//	NRF24_setAutoAck(false);
+
+	NRF24_stopListening();
+
+//	NRF24_enableDynamicPayloads();
+//	NRF24_enableAckPayload();
+#else
+
+	NRF24_setChannel(125);
+	NRF24_setPayloadSize(32);
+	NRF24_openReadingPipe(0, RxpipeAddrs);
+	NRF24_setPALevel(RF24_PA_0dB);
+	NRF24_setRetries(15, 15);
+	NRF24_setDataRate(RF24_250KBPS);
+	NRF24_setCRCLength(RF24_CRC_16);
+
+	NRF24_startListening();
+
+#endif
+
 printRadioSettings();
+
+//uint8_t datatx[] =  {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+//uint8_t datarx;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -122,19 +153,46 @@ printRadioSettings();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+#ifndef RX_MODE
 	if (NRF24_write(myTxData, 32)) {
-		NRF24_read(AckPayload, 32);
+//		NRF24_read(AckPayload, 32);
 		HAL_UART_Transmit(&huart2,
 				(uint8_t *) "Transmitted Successfully\r\n",
 				strlen("Transmitted Successfully\r\n"), 10);
-
-		char myDataack[80];
-		sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-		HAL_UART_Transmit(&huart2, (uint8_t *) myDataack, strlen(myDataack),
-				10);
+		HAL_GPIO_TogglePin(LED1_GPIO_Port,LED2_Pin);
+		HAL_Delay(50);
+		HAL_GPIO_TogglePin(LED1_GPIO_Port,LED2_Pin);
+		HAL_Delay(50);
+//		char myDataack[80];
+//		sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
+//		HAL_UART_Transmit(&huart2, (uint8_t *) myDataack, strlen(myDataack),
+//				10);
 	}
 	HAL_Delay(1000);
+#else
+	if(NRF24_available())
+	{
+		NRF24_read(myRxData, 32);
+		NRF24_writeAckPayload(1, myAckPayload, 32);
+		myRxData[32] = '\r'; myRxData[32+1] = '\n';
+		HAL_UART_Transmit(&huart2, (uint8_t *)myRxData, 32+2, 10);
+	}
+#endif
+/*
+ * only for test interface
+ */
+//	  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port,SPI1_CS_Pin,RESET);
+//	  HAL_SPI_Transmit(&hspi1,(uint8_t*)datatx,sizeof(datatx),10);
+//	  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port,SPI1_CS_Pin,SET);
+//	  for(uint8_t i=0x0;i<16;i++)
+//	  {
+//
+//	  	  HAL_GPIO_WritePin(nrf_CSN_PORT,nrf_CSN_PIN,RESET);
+//	  	  HAL_SPI_Transmit(&hspi3, &i,1,10);
+//	  	  HAL_GPIO_WritePin(nrf_CSN_PORT,nrf_CSN_PIN,SET);
+//	  }
   }
+
   /* USER CODE END 3 */
 }
 

@@ -1,107 +1,65 @@
-17:36:05 **** Incremental Build of configuration Debug for project NRF24_test ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gfxsimulator.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  14292	    160	   2000	  16452	   4044	NRF24_test.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
-Info: Nothing to build for NRF24_test
-18:19:25 **** Incremental Build of configuration Debug for project NRF24_test ****
+19:06:29 **** Rebuild of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32f4xx_hal_msp.o ..\Src\stm32f4xx_hal_msp.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\usart.o ..\Src\usart.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\gfxsimulator.o ..\Src\gfxsimulator.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c 
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\system_stm32f4xx.o ..\Src\system_stm32f4xx.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32f4xx_it.o ..\Src\stm32f4xx_it.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\gpio.o ..\Src\gpio.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32f4xx_hal_msp.o ..\Src\stm32f4xx_hal_msp.c 
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
 ..\Src\MY_NRF24.c: In function 'printRadioSettings':
-..\Src\MY_NRF24.c:730:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+..\Src\MY_NRF24.c:731:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
   sprintf(uartTxBuf, "\r\n**********************************************\r\n");
   ^~~~~~~
-..\Src\MY_NRF24.c:730:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\MY_NRF24.c:730:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+..\Src\MY_NRF24.c:731:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+..\Src\MY_NRF24.c:731:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
 ..\Src\MY_NRF24.c: In function 'printStatusReg':
-..\Src\MY_NRF24.c:857:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+..\Src\MY_NRF24.c:858:2: warning: incompatible implicit declaration of built-in function 'sprintf'
   sprintf(uartTxBuf, "\r\n-------------------------\r\n");
   ^~~~~~~
-..\Src\MY_NRF24.c:857:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+..\Src\MY_NRF24.c:858:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
 ..\Src\MY_NRF24.c: In function 'printConfigReg':
-..\Src\MY_NRF24.c:874:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+..\Src\MY_NRF24.c:875:2: warning: incompatible implicit declaration of built-in function 'sprintf'
   sprintf(uartTxBuf, "\r\n-------------------------\r\n");
   ^~~~~~~
-..\Src\MY_NRF24.c:874:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+..\Src\MY_NRF24.c:875:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
 ..\Src\MY_NRF24.c: In function 'printFIFOstatus':
-..\Src\MY_NRF24.c:896:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+..\Src\MY_NRF24.c:897:2: warning: incompatible implicit declaration of built-in function 'sprintf'
   sprintf(uartTxBuf, "\r\n-------------------------\r\n");
   ^~~~~~~
-..\Src\MY_NRF24.c:896:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\gpio.o ..\Src\gpio.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\spi.o ..\Src\spi.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c 
+..\Src\MY_NRF24.c:897:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c 
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c 
-arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gfxsimulator.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  14256	    160	   2000	  16416	   4020	NRF24_test.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
-18:22:29 **** Incremental Build of configuration Debug for project NRF24_test ****
-Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\syscalls.o ..\Src\syscalls.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -Wa,--no-warn -x assembler-with-cpp -specs=nano.specs -o startup\startup_stm32f429xx.o ..\startup\startup_stm32f429xx.s 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32f4xx_it.o ..\Src\stm32f4xx_it.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c 
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
 ..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gfxsimulator.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+..\Src\main.c:116:20: error: 'RF24_PA_LOW' undeclared (first use in this function)
+   NRF24_setPALevel(RF24_PA_LOW);
+                    ^~~~~~~~~~~
+..\Src\main.c:116:20: note: each undeclared identifier is reported only once for each function it appears in
+19:06:58 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  14256	    160	   2000	  16416	   4020	NRF24_test.elf
+  13156	    152	   2068	  15376	   3c10	NRF24_test.elf
 Print size information done
 Generate listing file
 Output sent to: NRF24_test.list
@@ -109,538 +67,295 @@ Generate listing file done
 Generate build reports done
 arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
 Info: Nothing to build for NRF24_test
+19:13:01 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  12864	    152	   2112	  15128	   3b18	NRF24_test.elf
+Print size information done
+Generate listing file
+Output sent to: NRF24_test.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+19:29:22 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  12864	    152	   2112	  15128	   3b18	NRF24_test.elf
+Print size information done
+Generate listing file
+Output sent to: NRF24_test.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+19:30:33 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  12864	    152	   2112	  15128	   3b18	NRF24_test.elf
+Print size information done
+Generate listing file
+Output sent to: NRF24_test.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
 Info: Nothing to build for NRF24_test
+19:36:20 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  12864	    152	   2112	  15128	   3b18	NRF24_test.elf
+Print size information done
+Generate listing file
+Output sent to: NRF24_test.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+19:38:31 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  12864	    152	   2112	  15128	   3b18	NRF24_test.elf
+Print size information done
+Generate listing file
+Output sent to: NRF24_test.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+19:46:29 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+Generate build reports...
+Print size information
+   text	   data	    bss	    dec	    hex	filename
+  12852	    160	   2112	  15124	   3b14	NRF24_test.elf
+Print size information done
+Generate listing file
+Output sent to: NRF24_test.list
+Generate listing file done
+Generate build reports done
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
 Info: Nothing to build for NRF24_test
-18:36:00 **** Incremental Build of configuration Debug for project NRF24_test ****
+19:48:39 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(&myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\main.c:132:11: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-   sprintf(&myDataack, "AckPayload:  %s \r\n", AckPayload);
-           ^
-..\Src\main.c:132:11: note: expected 'char *' but argument is of type 'char (*)[80]'
-arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gfxsimulator.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  14256	    160	   2000	  16416	   4020	NRF24_test.elf
+  12836	    160	   2112	  15108	   3b04	NRF24_test.elf
 Print size information done
 Generate listing file
 Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
 arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
-18:36:32 **** Incremental Build of configuration Debug for project NRF24_test ****
+Info: Nothing to build for NRF24_test
+19:58:51 **** Rebuild of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\spi.o ..\Src\spi.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -Wa,--no-warn -x assembler-with-cpp -specs=nano.specs -o startup\startup_stm32f429xx.o ..\startup\startup_stm32f429xx.s 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\system_stm32f4xx.o ..\Src\system_stm32f4xx.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32f4xx_hal_msp.o ..\Src\stm32f4xx_hal_msp.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c 
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(&myDataack, "AckPayload:  %s \r\n", &AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\main.c:132:11: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
-   sprintf(&myDataack, "AckPayload:  %s \r\n", &AckPayload);
-           ^
-..\Src\main.c:132:11: note: expected 'char *' but argument is of type 'char (*)[80]'
-..\Src\main.c:132:38: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'char (*)[32]' [-Wformat=]
-   sprintf(&myDataack, "AckPayload:  %s \r\n", &AckPayload);
-                                      ^
-arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gfxsimulator.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
+..\Src\MY_NRF24.c: In function 'printRadioSettings':
+..\Src\MY_NRF24.c:731:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  sprintf(uartTxBuf, "\r\n**********************************************\r\n");
+  ^~~~~~~
+..\Src\MY_NRF24.c:731:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+..\Src\MY_NRF24.c:731:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+..\Src\MY_NRF24.c: In function 'printStatusReg':
+..\Src\MY_NRF24.c:858:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
+  ^~~~~~~
+..\Src\MY_NRF24.c:858:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+..\Src\MY_NRF24.c: In function 'printConfigReg':
+..\Src\MY_NRF24.c:875:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
+  ^~~~~~~
+..\Src\MY_NRF24.c:875:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+..\Src\MY_NRF24.c: In function 'printFIFOstatus':
+..\Src\MY_NRF24.c:897:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
+  ^~~~~~~
+..\Src\MY_NRF24.c:897:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\gpio.o ..\Src\gpio.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32f4xx_it.o ..\Src\stm32f4xx_it.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\syscalls.o ..\Src\syscalls.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\usart.o ..\Src\usart.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  14256	    160	   2000	  16416	   4020	NRF24_test.elf
+  12836	    160	   2112	  15108	   3b04	NRF24_test.elf
 Print size information done
 Generate listing file
 Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
 arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
-18:36:55 **** Incremental Build of configuration Debug for project NRF24_test ****
+20:00:45 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gfxsimulator.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  14256	    160	   2000	  16416	   4020	NRF24_test.elf
+  13548	    160	   2112	  15820	   3dcc	NRF24_test.elf
 Print size information done
 Generate listing file
 Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
 arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
-18:48:48 **** Rebuild of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+Info: Nothing to build for NRF24_test
+20:14:56 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\syscalls.o ..\Src\syscalls.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\usart.o ..\Src\usart.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\spi.o ..\Src\spi.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\gpio.o ..\Src\gpio.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32l0xx_hal_msp.o ..\Src\stm32l0xx_hal_msp.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -g -Wa,--no-warn -x assembler-with-cpp -specs=nano.specs -o startup\startup_stm32l073xx.o ..\startup\startup_stm32l073xx.s 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
-In file included from ..\Src\MY_NRF24.c:21:0:
-../Inc/MY_NRF24.h:21:82: fatal error: stm32f4xx_hal.h: No such file or directory
- #include "stm32f4xx_hal.h"   //** Change this according to your STM32 series **//
-                                                                                  ^
-compilation terminated.
-18:49:38 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\system_stm32l0xx.o ..\Src\system_stm32l0xx.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
-..\Src\MY_NRF24.c: In function 'printRadioSettings':
-..\Src\MY_NRF24.c:730:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  sprintf(uartTxBuf, "\r\n**********************************************\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:730:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\MY_NRF24.c:730:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printStatusReg':
-..\Src\MY_NRF24.c:857:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:857:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printConfigReg':
-..\Src\MY_NRF24.c:874:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:874:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printFIFOstatus':
-..\Src\MY_NRF24.c:896:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:896:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32l0xx_it.o ..\Src\stm32l0xx_it.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:97:30: error: 'CSNpin_Pin' undeclared (first use in this function)
-   NRF24_begin(CSN_GPIO_Port, CSNpin_Pin, CE_Pin, hspi1);
-                              ^~~~~~~~~~
-..\Src\main.c:97:30: note: each undeclared identifier is reported only once for each function it appears in
-..\Src\main.c:127:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:127:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:127:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-18:49:49 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:97:30: error: 'CSNpin_Pin' undeclared (first use in this function)
-   NRF24_begin(CSN_GPIO_Port, CSNpin_Pin, CE_Pin, hspi1);
-                              ^~~~~~~~~~
-..\Src\main.c:97:30: note: each undeclared identifier is reported only once for each function it appears in
-..\Src\main.c:127:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:127:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:127:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-18:51:17 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:127:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:127:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:127:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c 
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  15072	    152	   2064	  17288	   4388	NRF24_test_NUCLEO_L073rz.elf
+  12932	    160	   2112	  15204	   3b64	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-18:55:32 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+Info: Nothing to build for NRF24_test
+20:18:30 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\spi.o ..\Src\spi.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
-..\Src\MY_NRF24.c: In function 'printRadioSettings':
-..\Src\MY_NRF24.c:730:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  sprintf(uartTxBuf, "\r\n**********************************************\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:730:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\MY_NRF24.c:730:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printStatusReg':
-..\Src\MY_NRF24.c:857:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:857:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printConfigReg':
-..\Src\MY_NRF24.c:874:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:874:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printFIFOstatus':
-..\Src\MY_NRF24.c:896:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:896:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\system_stm32l0xx.o ..\Src\system_stm32l0xx.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\gpio.o ..\Src\gpio.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32l0xx_hal_msp.o ..\Src\stm32l0xx_hal_msp.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:127:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:127:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:127:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\usart.o ..\Src\usart.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o ..\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c 
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\stm32l0xx_it.o ..\Src\stm32l0xx_it.c 
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  15072	    152	   2064	  17288	   4388	NRF24_test_NUCLEO_L073rz.elf
+  12932	    160	   2112	  15204	   3b64	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-19:17:58 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+20:19:21 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  14908	    152	   2032	  17092	   42c4	NRF24_test_NUCLEO_L073rz.elf
+  13564	    160	   2112	  15836	   3ddc	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:20:45 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+20:19:49 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
-..\Src\MY_NRF24.c: In function 'printRadioSettings':
-..\Src\MY_NRF24.c:730:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  sprintf(uartTxBuf, "\r\n**********************************************\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:730:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\MY_NRF24.c:730:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printStatusReg':
-..\Src\MY_NRF24.c:857:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:857:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printConfigReg':
-..\Src\MY_NRF24.c:874:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:874:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printFIFOstatus':
-..\Src\MY_NRF24.c:896:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:896:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  15332	    152	   2032	  17516	   446c	NRF24_test_NUCLEO_L073rz.elf
+  13564	    160	   2112	  15836	   3ddc	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:26:01 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+20:22:03 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:127:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:127:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:127:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  15228	    144	   2064	  17436	   441c	NRF24_test_NUCLEO_L073rz.elf
+  13564	    160	   2112	  15836	   3ddc	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:28:51 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+20:34:46 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:127:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:127:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:127:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  15496	    152	   2064	  17712	   4530	NRF24_test_NUCLEO_L073rz.elf
+  13564	    160	   2112	  15836	   3ddc	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:30:03 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
+21:31:59 **** Incremental Build of configuration Debug for project NRF24_test ****
 Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
-..\Src\MY_NRF24.c: In function 'printRadioSettings':
-..\Src\MY_NRF24.c:730:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  sprintf(uartTxBuf, "\r\n**********************************************\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:730:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\MY_NRF24.c:730:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printStatusReg':
-..\Src\MY_NRF24.c:857:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:857:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printConfigReg':
-..\Src\MY_NRF24.c:874:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:874:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printFIFOstatus':
-..\Src\MY_NRF24.c:896:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:896:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
+arm-atollic-eabi-gcc -o NRF24_test.elf Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.o Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32f4xx_hal_msp.o Src\stm32f4xx_it.o Src\syscalls.o Src\system_stm32f4xx.o Src\usart.o startup\startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java -jar C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  15072	    152	   2064	  17288	   4388	NRF24_test_NUCLEO_L073rz.elf
+  13564	    160	   2112	  15836	   3ddc	NRF24_test.elf
 Print size information done
 Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
+Output sent to: NRF24_test.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:32:30 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:128:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:128:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:128:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  15072	    152	   2064	  17288	   4388	NRF24_test_NUCLEO_L073rz.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:33:08 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\MY_NRF24.o ..\Src\MY_NRF24.c 
-..\Src\MY_NRF24.c: In function 'printRadioSettings':
-..\Src\MY_NRF24.c:730:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  sprintf(uartTxBuf, "\r\n**********************************************\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:730:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\MY_NRF24.c:730:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printStatusReg':
-..\Src\MY_NRF24.c:857:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:857:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printConfigReg':
-..\Src\MY_NRF24.c:874:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:874:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\Src\MY_NRF24.c: In function 'printFIFOstatus':
-..\Src\MY_NRF24.c:896:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-  sprintf(uartTxBuf, "\r\n-------------------------\r\n");
-  ^~~~~~~
-..\Src\MY_NRF24.c:896:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  15496	    152	   2064	  17712	   4530	NRF24_test_NUCLEO_L073rz.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:35:50 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  15508	    152	   2064	  17724	   453c	NRF24_test_NUCLEO_L073rz.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-Info: Nothing to build for NRF24_test_NUCLEO_L073rz
-19:38:31 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  15508	    152	   2064	  17724	   453c	NRF24_test_NUCLEO_L073rz.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:40:38 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:112:4: error: expected ';' before 'NRF24_enableDynamicPayloads'
-    NRF24_enableDynamicPayloads();
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-19:40:43 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:132:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:132:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:132:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  15508	    152	   2064	  17724	   453c	NRF24_test_NUCLEO_L073rz.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
-19:42:38 **** Incremental Build of configuration Debug for project NRF24_test_NUCLEO_L073rz ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m0plus -std=gnu11 -D__weak=__attribute__((weak)) -D__packed=__attribute__((__packed__)) -DUSE_HAL_DRIVER -DSTM32L073xx -I../Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src\main.o ..\Src\main.c 
-..\Src\main.c: In function 'main':
-..\Src\main.c:131:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   sprintf(myDataack, "AckPayload:  %s \r\n", AckPayload);
-   ^~~~~~~
-..\Src\main.c:131:3: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\Src\main.c:131:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-arm-atollic-eabi-gcc -o NRF24_test_NUCLEO_L073rz.elf Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_spi.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_tim_ex.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.o Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.o Src\MY_NRF24.o Src\gpio.o Src\main.o Src\spi.o Src\stm32l0xx_hal_msp.o Src\stm32l0xx_it.o Src\syscalls.o Src\system_stm32l0xx.o Src\usart.o startup\startup_stm32l073xx.o -mthumb -mcpu=cortex-m0plus -T../STM32L073RZ_FLASH.ld -specs=nosys.specs -static -Wl,-Map=NRF24_test_NUCLEO_L073rz.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-D:\Atollic\TrueSTUDIO for STM32 9.0.0\ide\jre\bin\java -jar D:\Atollic\TrueSTUDIO for STM32 9.0.0\Tools\arm-atollic-reports.jar sizeinfo list NRF24_test_NUCLEO_L073rz.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  15508	    152	   2064	  17724	   453c	NRF24_test_NUCLEO_L073rz.elf
-Print size information done
-Generate listing file
-Output sent to: NRF24_test_NUCLEO_L073rz.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy.exe -O ihex NRF24_test_NUCLEO_L073rz.elf NRF24_test_NUCLEO_L073rz.hex 
+arm-atollic-eabi-objcopy.exe -O ihex NRF24_test.elf NRF24_test.hex 
